@@ -19,6 +19,9 @@ btns.forEach((btn) => {
 
     //set text of form span
     formAct.textContent = activity;
+
+    // call the update function
+    update(data);
   });
 });
 
@@ -31,7 +34,7 @@ form.addEventListener("submit", (e) => {
       .add({
         distance,
         activity,
-        date: new Date().toDateString(),
+        date: new Date().toString(),
       })
       .then(() => {
         error.textContent = "";
